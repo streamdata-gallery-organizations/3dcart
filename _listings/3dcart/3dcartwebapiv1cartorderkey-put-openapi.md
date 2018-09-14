@@ -17,61 +17,7 @@ produces:
 consumes:
 - application/json
 paths:
-  /3dCartWebAPI/v1/Cart:
-    post:
-      summary: Adds a new cart to the system
-      description: Adds a new cart to the system.
-      operationId: Carts_Post
-      x-api-path-slug: 3dcartwebapiv1cart-post
-      parameters:
-      - in: body
-        name: cart
-        description: A Json or XML object containing the new cart
-        schema:
-          $ref: '#/definitions/holder'
-      - in: header
-        name: PrivateKey
-        description: PrivateKey
-      - in: header
-        name: SecureURL
-        description: SecureURL
-      - in: header
-        name: Token
-        description: Token
-      responses:
-        200:
-          description: OK
-      tags:
-      - S
-      - New
-      - Cart
-      - To
-      - System
   /3dCartWebAPI/v1/Cart/{orderkey}:
-    get:
-      summary: Get a specific cart
-      description: Get a specific cart.
-      operationId: Carts_GetCart
-      x-api-path-slug: 3dcartwebapiv1cartorderkey-get
-      parameters:
-      - in: path
-        name: orderkey
-        description: Order Key
-      - in: header
-        name: PrivateKey
-        description: PrivateKey
-      - in: header
-        name: SecureURL
-        description: SecureURL
-      - in: header
-        name: Token
-        description: Token
-      responses:
-        200:
-          description: OK
-      tags:
-      - Specific
-      - Cart
     put:
       summary: This method is used to update a single cart record in the database.
         The {orderkey} parameter specifies which cart record to update.
